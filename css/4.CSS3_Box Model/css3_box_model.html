@@ -139,6 +139,7 @@
             border-style : 상우하좌;
         */
 
+/*=========================================================================================================*/
 
         /*
             border-width : 테두리 선의 두께 지정, border-style과 함께 사용해야 함
@@ -160,6 +161,7 @@
             border-width : 상우하좌;
         */
 
+/*=========================================================================================================*/
 
         /*
             border-color : 테두리 선의 색상 지정, border-style과 함께 사용해야 함
@@ -246,7 +248,7 @@
         */
         .content-box { 
             box-sizing: content-box;
-            width: 100px;
+            width: 100px; /* 박스 안에 컨텐츠로 너비를 지정 */
             border: 5px solid black;
             padding: 10px;
             margin: 20px;
@@ -254,13 +256,12 @@
 
         .border-box { 
             box-sizing: border-box;
-            width: 100px;
+            width: 100px; /* 박스 너비 지정, width + 패딩 + 테두리 */
             border: 5px solid black;
             padding: 10px;
             margin: 20px;
         }
         
-
     </style>
 </head>
 <body>
