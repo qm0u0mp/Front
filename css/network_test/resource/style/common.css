@@ -22,8 +22,6 @@ body {
   width: 1712px;
 }
 
-/* ================================================================================= */
-
 /* first contents box */
 .first-contents-box {
   display: flex;
@@ -51,26 +49,19 @@ body {
   background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&opt=C72x72.fwebp);
 }
 .icon-release {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 10px;
   padding: 10px;
 }
 .icon-date {
   font-size: 14px;
-  line-height: 38px;
+  line-height: 40px;
 }
 .icon-button{
   width: 24px;
   height: 24px;
   background-size: 100%;
   background-image: url(https://cdn-icons-png.flaticon.com/512/64/64576.png);
-}
-.first-data {
-  background-image: url();
 }
 .first-content-down {
   margin-top: 12px;
@@ -80,8 +71,6 @@ body {
   line-height: 76px;
   height: 76px;
 }
-
-/* ================================================================================= */
 
 /* second contents box */
 .second-contents-box {
@@ -103,6 +92,9 @@ body {
 .second-content-card:hover {
   cursor: pointer;
 }
+.second-content-card:hover .round-black {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .category {
   display: flex;
 }
@@ -120,7 +112,4 @@ body {
   text-align: center;
   line-height: 24px;
   border-radius: 12px;
-}
-.second-content-card:hover .round-black {
-  background-color: rgba(0, 0, 0, 0.8);
 }
