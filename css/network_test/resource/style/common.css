@@ -28,6 +28,7 @@ body {
   gap: 16px;
 }
 .first-data {
+  display: inline-block;
   background-color: rgba(240, 240, 240, 1);
   border-radius: 20px;
   padding: 36px 40px;
