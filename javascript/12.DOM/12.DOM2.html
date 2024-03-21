@@ -199,13 +199,13 @@
             - undefined 반환
             - 모든 브라우저에서 동작
         */
-        const signUpButtonElement = document.createElement('button'); // 요소로 버튼 생성
-        const signUpButtonText = document.createTextNode('회원가입'); // 요소 안의 텍스트 '회원가입'
+        const signUpButtonElement = document.createElement('button'); // 새로운 버튼 생성
+        const signUpButtonText = document.createTextNode('회원가입'); // 버튼 안의 텍스트 '회원가입'
 
-        signUpButtonElement.appendChild(signUpButtonText);
-        signUpButtonElement.className = 'custom-button';
+        signUpButtonElement.appendChild(signUpButtonText); // signUpButtonElement의 하위 요소로 signUpButtonText 삽입 
+        signUpButtonElement.className = 'custom-button'; // custom-button css 적용
 
-        const buttonBoxElement = document.getElementById('button-box');
+        const buttonBoxElement = document.getElementById('button-box'); // 버튼 박스 생성
         buttonBoxElement.appendChild(signUpButtonElement); // 결과값 : 회원가입 버튼 생김
 
         console.log('==============================');
@@ -226,7 +226,6 @@
             style : inline 스타일 선언 가능
         */
         buttonBoxElement.style.backgroundColor = 'rgba(0,255,0,0.5)';
-
 
     </script>
 
