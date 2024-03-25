@@ -58,7 +58,7 @@
 
 /*========================================================================*/
 
-.sign-in-title{
+.sign-in-title{ /* '임대주택 가격 서비스' 글씨 */
     color: rgba(64,64,64,1);
 }
 .sign-in-contents{ /* 로그인 구역 감싸는 class */
@@ -77,20 +77,20 @@
 
 /*========================================================================*/
 
-.input-box{
+.input-box{ /* 아이디 입력 구역 */
     width: 100%;
     
 }
-.input-label{
+.input-label{ /* 아이디, 비밀번호 글씨 */
     color: rgba(138,146,166,1);
 }
-.input-content-box{
+.input-content-box{ /* 아이디 입력 인풋박스 */
     display: flex;
     margin-top: 8px;
     margin-bottom: 4px;
     gap: 10px;
 }
-.input{
+.input{ /* 아이디 입력 인풋박스 내부 */
     flex-grow: 1;
     border: 1px solid rgba(238,238,238,1);
     border-radius: 6px;
@@ -105,7 +105,7 @@
     line-height: 175%;
     color: rgba(35,45,66,1)
 }
-.input::placeholder{
+.input::placeholder{ /* 인풋박스 내부 글씨 */
     color: rgba(138,146,166,1);
 }
 .input-message{
