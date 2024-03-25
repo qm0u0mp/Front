@@ -33,14 +33,14 @@
     display: flex;
     width: 100%;
 }
-.sign-in-image-box {
+.sign-in-image-box { /* 사진 구역 */
     min-width: 830px;
     height: 100vh;
     min-height: 1024px;
     background-image: url('./resource/image/sign-in-background.png');
     background-size: cover;
 }
-.sign-in-box {
+.sign-in-box { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,14 +61,14 @@
 .sign-in-title{
     color: rgba(64,64,64,1);
 }
-.sign-in-contents{
+.sign-in-contents{ /* 로그인 구역 감싸는 class */
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 24px;
 }
-.sign-in-input-container{
+.sign-in-input-container{ /* 아이디, 비밀번호 */
     display: flex;
     width: 100%;
     flex-direction: column;
