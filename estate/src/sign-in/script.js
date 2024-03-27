@@ -1,4 +1,4 @@
-// ID,PASSWORD 임시 선언
+// 임시정보
 
 const ID = 'userIdentity';
 const PASSWORD = 'P!ssw0rd';
@@ -23,7 +23,8 @@ function onSignInButtonClickHandler(event) {
 
 // 회원가입
 function onSignUpLinkClickHandler(event) {
-    window.location.href = 'https://google.com';
+    // window.location.href = '../sign-up/index.html'; => index.html 안 붙여도 sign-up 페이지로 이동함
+    window.location.href = '../sign-up';
 }
 const signUpLinkElement = document.getElementById('sign-up-link');
 signUpLinkElement.addEventListener('click', onSignUpLinkClickHandler);
