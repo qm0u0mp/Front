@@ -53,12 +53,12 @@ function onIdInputHandler (event) {
 function onPasswordInputHandler (event) {
     password = event.target.value;
 
-    const passwordReg = /^(?=.*[a-zA-Z])(?=.*[0-9]){8,13}$/;
-    const isPasswordPattern = passwordReg.test(password);
+    const passwordReg = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{8,13}$/;
+    isPasswordPattern = passwordReg.test(password);
 
-    if(isPasswordPattern){
+    if (!isPasswordPattern) {
         passwordMessageElement.className = 'input-message error';
-        passwordMessageElement.textContent = '영문, 숫자를 혼용하여 8~13자 입력해주세요.';
+        passwordMessageElement.textContent = '영문, 숫자를 혼용하여 8 ~ 13자 입력해주세요';
         return;
     }
     passwordMessageElement.className = 'input-message';
@@ -71,7 +71,7 @@ function onPasswordInputHandler (event) {
 function onPasswordCheckInputHandler (event) {
     passwordCheck = event.target.value;
 
-    const isEqualPassword = password === passwordCheck;
+    isEqualPassword = password === passwordCheck;
 
     if(!isEqualPassword) {
         passwordCheckMessageElement.className = 'input-message error';
@@ -226,6 +226,7 @@ checkAuthNumberButtonElement.addEventListener('click', function (event) {
 // 회원가입 버튼
 
 function setSignUpButton () {
+    // isPrimaryButton이 
     const isPrimaryButton = 
         id && password && passwordCheck && email && authNumber && 
         !isDuplicate && isPasswordPattern && isEqualPassword && isEmail && !isDuplicateEmail && isEqualAuthNumber;
