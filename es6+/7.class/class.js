@@ -37,7 +37,7 @@ class King {
 }
 
 const junjong = new King('이방과', '정종', '1357-07-26', '1419-10-24');
-console.log(junjong);
+console.log(junjong); // 결과값 : king{ } 클래스 출력
 
 
 console.log('==================================================');
@@ -69,10 +69,10 @@ class Sample1 {
 
 const sample1Instance = new Sample1('퍼블릭 필드', '프라이빗 필드');
 
-console.log(sample1Instance);
+console.log(sample1Instance); // 결과값 : Sample1 { publicField: '퍼블릭 필드' }
 // console.log(sample1Instance.#privateField);
 // console.log(sample1Instance.staticPublicField);
-console.log(Sample1.staticPublicField);
+console.log(Sample1.staticPublicField); // 결과값 : 정적 퍼블릿 필드
 
 console.log('==================================================');
 
@@ -98,9 +98,9 @@ class Sample2 {
 }
 
 const sample2Instance = new Sample2('프라이빗 필드');
-console.log(sample2Instance.privateField);
+console.log(sample2Instance.privateField); // 결과값 : 프라이빗 필드
 sample2Instance.privateField = '변경 프라이빗 필드';
-console.log(sample2Instance.privateField);
+console.log(sample2Instance.privateField); // 변경 프라이빗 필드
 
 console.log('==================================================');
 
@@ -114,14 +114,14 @@ class Sample3 {
         console.log('인스턴스 메서드');
     }
 
-    static staticMethod () {
+    static staticMethod () { // static 키워드를 사용하여 선언함으로써 새로운 인스턴스를 선언하지 않고 '클래스.메서드이름'을 통해 호출 가능
         console.log('정적 메서드');
     }
 }
 
 const sample3Instance = new Sample3();
-sample3Instance.instanceMethod();
-Sample3.staticMethod();
+sample3Instance.instanceMethod(); // 결과값 : 인스턴스 메서드
+Sample3.staticMethod(); // 결과값 : 정적 메서드
 
 console.log('==================================================');
 
@@ -170,12 +170,12 @@ class Child2Class extends ParentClass {
 }
 
 const child1Instance = new Child1Class();
-console.log(child1Instance.parentField);
-console.log(child1Instance.child1Field);
-child1Instance.parentMethod();
-child1Instance.child1Method();
+console.log(child1Instance.parentField); // 결과값 : 부모 필드
+console.log(child1Instance.child1Field); // 결과값 : 자식1 필드
+child1Instance.parentMethod(); // 결과값 : 부모 메서드
+child1Instance.child1Method(); // 결과값 : 자식1 메서드
 
 const child2Instance = new Child2Class();
-console.log(child2Instance.parentField);
-console.log(child2Instance.child2Field);
-child2Instance.parentMethod();
+console.log(child2Instance.parentField); // 결과값 : 부모 필드
+console.log(child2Instance.child2Field); // 결과값 : 자식2 필드
+child2Instance.parentMethod(); // 결과값 : 자식2 메서드
