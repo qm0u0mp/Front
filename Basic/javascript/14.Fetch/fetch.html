@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Fetch</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+            JSON: JavaScript Object Notation
+            - 클라이언트와 서버 간 데이터 교환을 위한 문자열 포맷
+            - XML 포맷보다 가볍고 사용성이 좋음
+            - 자바스크립트의 객체 리터럴과 비슷하게 생겼지만, JSON은 순수 텍스트
+        */
+
+        /*
+            JSON.stringify : javascript 객체를 JSON 형식의 문자열로 변환
+        */
+        const object = {
+            name : '이방원',
+            age : 56
+        } // 변수를 객체로 선언
+        console.log(typeof object, object) // 결과값 : object > {name: '이방원', age: 56} => 객체로 선언해두었기 때문에 타입은 object로 출력
+
+        const jsonObject = JSON.stringify(object);
+        console.log(typeof jsonObject, jsonObject); // 결과값 : string {"name":"이방원","age":56} => JOSN.stringify을 이용하여 객체 선언 시, 문자열로 객체를 반환하기 때문에 타입은 string으로 출력
+
+        console.log('==============================');
+
+        /*
+            JSON.parse : JSON 포맷의 문자열 데이터를 자바스크립트 객체로 변경
+        */
+        const stringJson = '{"name" : "이도", "age" : 54}'; // 객체를 문자열로 선언
+        console.log(typeof stringJson, stringJson); // 결과값 : string {"name" : "이도", "age" : 54}
+
+        const object2 = JSON.parse(stringJson);
+        console.log(typeof object2, object2); // 결과값 : object > {name: '이도', age: 54} => JSON.parse을 이용하여 string 타입으로 선언된 객체를 object 타입으로 변경
+        
+
+        console.log('==============================');
+
+        /*
+            Fetch API
+            - HTTP 요청과 응답을 javascript에서 접근하고 조작할 수 있는 인터페이스
+            - 비동기 함수
+            - fetch(url, options)
+            - fetch(url, options).then(callback).catch(callback)
+        */
+
+        /*
+            Request
+        */
+
+        // fetch 함수는 기본적으로 GET 요청
+        fetch('http://localhost:5500');
+
+        // 특정 메서드로 요청을 보내거나 요청에 대한 옵션을 변경하려면 두번째 options 메서드로 옵션 객체를 전달
+        fetch('http://localhost:5500', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: stringJson
+        }) // => POST 에러
+        
+        // QueryString으로 데이터를 전송하는 방법
+        const queryString = new URLSearchParams(object2).toString();
+        fetch('http://localhost:5500/?' + queryString);
+
+        // URL Pattern으로 데이터를 전송하는 방법
+        const name = 'gildong';
+        fetch(`http://localhost:5500/${name}`); // => GET 에러
+
+        // 비동기 함수는 반환 데이터가 Primise 객체를 반환
+        // Promise 객체는 결과가 정상적으로 반환이 될 때까지 사용 X
+        const response = fetch('http://localhost:5500');
+        console.log(response);
+
+        // 비동기 함수.then(callback)을 사용하여 결과 사용
+        fetch('http://localhost:5500').then(function(response){
+            console.log(response);
+        })
+
+        // 동기 함수로 지정하여 결과를 기다렸다가 사용
+        async function getLocalhost () { // async await 비동기 처리를 동기 처리로 변경
+            console.log('함수시작');
+            const response = await fetch('http://localhost:5500');
+            console.log(response);
+            console.log('함수종료');
+        }
+
+        getLocalhost();
+
+        // 허용되지 않은 출처에 대해서 요청을 받으려고 할 떄 에러 발생
+        // CORS : Cross-Origin Resource Sharing
+        //      => 웹 브라우저에서 실행되는 자바스크립트가 다른 출처의 resource를 접근하려 하는 것을 제어하는 방식
+        //      => 출처는 프로토콜, 호스트 주소, 포트를 의미
+        fetch('https://naver.com', {
+            mode : 'no-cors'
+        });
+
+        console.log('==============================');
+
+    </script>
+
+</body>
+
+</html>

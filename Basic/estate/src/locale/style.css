@@ -1,0 +1,120 @@
+#wrapper{
+    display: grid;
+    grid-template: 
+        "logo topbar" 77px /* 행 높이 */
+        "sidenav main" minmax(1043px, auto) /* 행 높이, calc: css에서 적용시킬 수 있는 연산함수 */
+        / 257px minmax(1182px, 1fr); /* 열 너비, 줄어드는건 1182px만큼 줄어들고 늘어나는건 viewport에 대해 늘어남 */
+}
+
+/* ================================================================== */
+
+/* 임대주택 글씨 */
+.logo-container{
+    grid-area : logo; /* 영역 표시 */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 173%;
+    color: rgba(64,64,64,1);
+
+    border-bottom: 1px solid rgba(233,236,239,1);
+}
+
+/* ================================================================== */
+
+/* 지역평균, 로그아웃 묶음 */
+.top-bar-container{
+    grid-area: topbar; /* 영역 표시 */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+    border-left: 1px solid rgba(233,236,239,1);
+    border-bottom: 1px solid rgba(233,236,239,1);
+}
+
+/* 지역 평균 글씨 */
+.top-bar-title{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: rgba(64,64,64,1);
+}
+
+/* ================================================================== */
+
+/* 사이드 묶음 */
+.side-navigation-container{
+    grid-area: sidenav; /* 영역 표시 */
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 12px;
+}
+
+/* 사이드 버튼 */
+.side-navigation-item{
+    border-radius: 6px;
+    padding: 8px 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    color: rgba(138,146,166,1);
+}
+
+.side-navigation-item:hover{
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.side-navigation-item.active{
+    background-color: rgba(58,87,232,1);
+    color: rgba(255,255,255,1);
+}
+
+.side-navigation-icon{
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+}
+
+.side-navigation-icon.chart{
+    background-image: url('../../resource/image/chart-icon.png');
+}
+
+.side-navigation-icon.pie{
+    background-image: url('../../resource/image/pie-icon.png');
+}
+
+.side-navigation-icon.edit{
+    background-image: url('../../resource/image/edit-icon.png');
+}
+
+.side-navigation-title{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+/* ================================================================== */
+
+/* 메인 화면 */
+.main-container{
+    grid-area: main; /* 영역 표시 */
+
+    padding: 24px;
+    background-color: rgba(238,238,238,0.5);
+}

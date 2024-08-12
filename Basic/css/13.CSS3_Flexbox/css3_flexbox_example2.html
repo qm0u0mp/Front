@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gap</title>
+
+    <style>
+        
+        #flex-container{
+            width: 800px;
+            height: 800px;
+            background-color: rgba(0,0,0,0.15);
+            display: flex;
+            gap : 8px;
+            flex-direction: rows;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-item{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255,0,0,0.7);
+            /* margin-left: 8px; 왼쪽에 공백 8px */
+            font-size: 24px;
+            font-weight: 900;
+            border: 1px solid black;
+            flex-grow: 1;
+        }
+        /* .flex-item:first-child{
+            margin-left: 0px; 왼쪽에 공백 0px 
+        } */
+
+    </style>
+</head>
+<body>
+    <div id="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>        
+        <div class="flex-item">3</div>
+    </div>
+</body>
+</html>
