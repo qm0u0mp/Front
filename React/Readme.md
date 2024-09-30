@@ -4,6 +4,8 @@
 
 ### React 실행
 - npx create-react-app 프로젝트명(카멜케이스) --template typescript
+  
+- 설치하려는 위치 확인하고
 - npm install
 - npm run start
 
