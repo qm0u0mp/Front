@@ -9,7 +9,7 @@
 - npm install
 - npm run start
 
-### zustand 설치
+### 라이브러리 설치
 - 설치하려는 위치 확인하고
 - npm install
 - npm i zustand
@@ -25,6 +25,8 @@
 - npm install chart.js
 - npm install chart react-chartjs-2
 - npm install react-kakao-maps-sdk
+  
+============================================
 
 ### Build 실행
 - npm run build:development
