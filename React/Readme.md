@@ -3,7 +3,7 @@
 - node -v , npm -v 버전 확인으로 설치되었는지 확인
 
 ### React 실행
-- npx create-react-app 프로젝트명(카멜케이스) --template typescript
+- npx create-react-app 프로젝트명 --template typescript
   
 - 설치하려는 위치 확인하고
 - npm install
