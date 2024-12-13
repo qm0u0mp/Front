@@ -25,6 +25,7 @@
 - npm install chart.js
 - npm install chart react-chartjs-2
 - npm install react-kakao-maps-sdk
+- npm install xlsx
   
 ============================================
 
