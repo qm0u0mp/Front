@@ -10,8 +10,8 @@
 - npm run start
 
 ### 라이브러리 설치
-!! 설치하려는 위치 확인하고
-" npm install
+!! 설치하려는 위치 확인하고 \n
+npm install
 - @react-pdf/renderer@4.1.6
 - @testing-library/jest-dom@5.17.0
 - @testing-library/react@13.4.0
@@ -35,7 +35,7 @@
 - typescript@4.9.5
 - web-vitals@2.1.4
 - xlsx@0.18.5
-- zustand@5.0.3 "
+- zustand@5.0.3
 
 ============================================
 
