@@ -11,6 +11,7 @@
 
 ### 라이브러리 설치
 !! 설치하려는 위치 확인하고
+npm install
 - @react-pdf/renderer@4.1.6
 - @testing-library/jest-dom@5.17.0
 - @testing-library/react@13.4.0
