@@ -11,22 +11,31 @@
 
 ### 라이브러리 설치
 - 설치하려는 위치 확인하고
-- npm install
-- npm i zustand
-- npm i react-router
-- npm i react-router-dom
-- npm i axios
-- npm install react-cookie
-- npm i dotenv-cli
-- npm install @nivo/core
-- npm install @nivo/bar
-- npm install @nivo/pie
-- npm install @nivo/line
-- npm install chart.js
-- npm install chart react-chartjs-2
-- npm install react-kakao-maps-sdk
-- npm install xlsx
-  
+├── @react-pdf/renderer@4.1.6
+├── @testing-library/jest-dom@5.17.0
+├── @testing-library/react@13.4.0
+├── @testing-library/user-event@13.5.0
+├── @types/dompurify@3.0.5
+├── @types/jest@27.5.2
+├── @types/node@16.18.123
+├── @types/react-dom@18.3.5
+├── @types/react@18.3.18
+├── axios@1.7.9
+├── dompurify@3.2.3
+├── dotenv-cli@7.4.4
+├── react-cookie@7.2.2
+├── react-doc-viewer@0.1.14
+├── react-dom@18.3.1
+├── react-quill@2.0.0
+├── react-router-dom@6.28.1
+├── react-router@6.28.1
+├── react-scripts@5.0.1
+├── react@18.3.1
+├── typescript@4.9.5
+├── web-vitals@2.1.4
+├── xlsx@0.18.5
+└── zustand@5.0.3
+
 ============================================
 
 ### Build 실행
