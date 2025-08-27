@@ -10,31 +10,31 @@
 - npm run start
 
 ### 라이브러리 설치
-- 설치하려는 위치 확인하고
-├── @react-pdf/renderer@4.1.6
-├── @testing-library/jest-dom@5.17.0
-├── @testing-library/react@13.4.0
-├── @testing-library/user-event@13.5.0
-├── @types/dompurify@3.0.5
-├── @types/jest@27.5.2
-├── @types/node@16.18.123
-├── @types/react-dom@18.3.5
-├── @types/react@18.3.18
-├── axios@1.7.9
-├── dompurify@3.2.3
-├── dotenv-cli@7.4.4
-├── react-cookie@7.2.2
-├── react-doc-viewer@0.1.14
-├── react-dom@18.3.1
-├── react-quill@2.0.0
-├── react-router-dom@6.28.1
-├── react-router@6.28.1
-├── react-scripts@5.0.1
-├── react@18.3.1
-├── typescript@4.9.5
-├── web-vitals@2.1.4
-├── xlsx@0.18.5
-└── zustand@5.0.3
+!! 설치하려는 위치 확인하고
+- @react-pdf/renderer@4.1.6
+- @testing-library/jest-dom@5.17.0
+- @testing-library/react@13.4.0
+- @testing-library/user-event@13.5.0
+- @types/dompurify@3.0.5
+- @types/jest@27.5.2
+- @types/node@16.18.123
+- @types/react-dom@18.3.5
+- @types/react@18.3.18
+- axios@1.7.9
+- dompurify@3.2.3
+- dotenv-cli@7.4.4
+- react-cookie@7.2.2
+- react-doc-viewer@0.1.14
+- react-dom@18.3.1
+- react-quill@2.0.0
+- react-router-dom@6.28.1
+- react-router@6.28.1
+- react-scripts@5.0.1
+- react@18.3.1
+- typescript@4.9.5
+- web-vitals@2.1.4
+- xlsx@0.18.5
+- zustand@5.0.3
 
 ============================================
 
